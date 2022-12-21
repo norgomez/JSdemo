@@ -1,8 +1,4 @@
-
-
-//////////////
-
-
+//Hangman Game
 const wordList = ['apple', 'banana', 'orange', 'strawberry'];
 
 let word = '';
@@ -61,5 +57,5 @@ function play() {
 play();
 
 
-//
+
 
