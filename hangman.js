@@ -1,61 +1,65 @@
-// This will be a hangman game 
-
-//storing values 
-let gameRounds = 0;
-let scoreUser = 0;
-let scoreComputer = 0;
 
 
-//List of random words
-const word = [
-    'Got',
-    'ability',
-    'shop',
-    'recall',
-    'fruit',
-    'easy',
-    'dirty',
-    'giant',
-    'shaking',
-    'ground',
-    'weather',
-    'lesson',
-    'almost',
-    'square',
-    'forward',
-    'bend',
-    'cold',
-    'broken',
-    'distant',
-    'adjective'
-]
+//////////////
 
-let randomElement = word[Math.floor(Math.random() * word.length)]
 
-let userInput = prompt('Please enter a word');
+const wordList = ['apple', 'banana', 'orange', 'strawberry'];
 
-if (game(userInput) == randomElement){
-    console.log('winner');
-} else{
-    console.log('Loser');
+let word = '';
+let letters = [];
+let guesses = [];
+let maxGuesses = 6;
 
+function setup() {
+  word = wordList[Math.floor(Math.random() * wordList.length)];
+  letters = word.split('');
+  guesses = new Array(letters.length).fill('_');
 }
 
+function guess(letter) {
+  if (guesses.includes(letter)) {
+    console.log(`You have already guessed "${letter}"`);
+    return;
+  }
+
+  let correctGuess = false;
+  for (let i = 0; i < letters.length; i++) {
+    if (letters[i] === letter) {
+      guesses[i] = letter;
+      correctGuess = true;
+    }
+  }
+
+  if (!correctGuess) {
+    maxGuesses--;
+  }
+}
+
+function gameOver() {
+  return maxGuesses === 0 || guesses.join('') === word;
+}
+
+function draw() {
+  console.log(`Word: ${guesses.join(' ')}`);
+  console.log(`Guesses remaining: ${maxGuesses}`);
+}
+
+function play() {
+  setup();
+  while (!gameOver()) {
+    draw();
+    const letter = prompt('Guess a letter:');
+    guess(letter);
+  }
+  if (maxGuesses === 0) {
+    console.log(`You lose! The word was "${word}"`);
+  } else {
+    console.log(`You win! The word was "${word}"`);
+  }
+}
+
+play();
 
 
-function game(x) {
-    for (let i = 0; i < 10; i++) {
-        if (x == randomElement) {
-            ++scoreUser
-        } else {
-            ++scoreComputer
-        };
-        
-    };
-};
+//
 
-
-console.log(scoreUser);
-console.log(scoreComputer);
-// print outputs
-console.log(randomElement);
