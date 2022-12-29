@@ -54,7 +54,10 @@ function play() {
   }
 }
 
-play();
+
+// Display in html instead of console
+document.getElementById("output").innerHTML = play();
+
 
 
 

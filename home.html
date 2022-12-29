@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="hangman.js"></script>
+    <div id="output">
+        <!-- Output from Javascript will be displayed here -->
+    </div>
+    <form>
+        <label for="input">Enter some text:</label><br>
+        <input type="text" id="input" name="input"><br>
+        <button type="button" onclick="processInput()">Submit</button>
+    </form>
+    <!-- <script src="hangman.js"></script> -->
+    <script src="library.js"></script>
     
 </body>
 </html>

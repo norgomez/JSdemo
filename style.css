@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+  }
+  h1 {
+    color: #00b8d4;
+  }
+  #output {
+    font-size: 18px;
+  }
