@@ -24,19 +24,29 @@ function getRandomNumber(max) {
 
 
 
+
+
+
 //////Outputs
-console.log("Tossing a coin 1000 times!")
+function play() {
 
-console.log("================================")
+    console.log("Tossing a coin 1000 times!")
 
-console.log("Total number of Heads: " + heads);
-console.log("Total number of Tails: " + tails);
+    console.log("================================")
 
-console.log("================================")
+    console.log("Total number of Heads: " + heads);
+    console.log("Total number of Tails: " + tails);
 
-//////Printing out the winner
-if (heads > tails) {
-    console.log('Heads is the winner!')
-} else{
-    console.log('Tails is the winnner!')
+    console.log("================================")
+
+    //////Printing out the winner
+    if (heads > tails) {
+        console.log('Heads is the winner!')
+    } else{
+        console.log('Tails is the winnner!')
+    };
+    
 };
+
+
+document.getElementById("output").innerHTML = play();
