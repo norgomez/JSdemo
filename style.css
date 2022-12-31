@@ -1,25 +1,90 @@
-
-
 body {
-    background-color:#F2AA4CFF;
-    font-family: Source Sans Pro ,  sans-serif;
-    color: #333;
-  }
-  h1 {
-    color: #101820FF;
-  }
-  #output {
-    font-size: 18px;
-  }
+  background-color:#F2AA4CFF;
+  font-family: Source Sans Pro ,  sans-serif;
+  color: #333;
+}
+h1 {
+  color: #101820FF;
+}
+#output {
+  font-size: 18px;
+}
 
-  form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 20px;
-  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  height: 50px;
+  font-size: 18px;
+}
 
-  /* Style the form elements */
+.logo {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+.nav_form {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#nav_text {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  width: 50px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+
+
+
+form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Style the form elements */
 label,
 input,
 textarea,
